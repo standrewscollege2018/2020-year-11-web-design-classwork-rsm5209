@@ -1,0 +1,50 @@
+.Trial {
+  display: grid;
+  grid-template-columns: 1fr, 2fr;
+}
+.Intro {
+  padding: 20px;
+}
+.Main {
+  padding: 20px;
+}
+* {
+  padding: 0px;
+  margin: 0px;
+}
+@font-face {
+  font-family: PhotoShoot;
+  src: url(Photoshoot.ttf);
+}
+body{
+  background-color: rgb(12, 24, 56);
+  color: rgb(255,255,255);
+}
+h1{
+  color: rgb(255, 255, 0);
+  font-family: PhotoShoot;
+  margin: 35px 0 20px 0;
+}
+h2{
+  font-family: Arial;
+}
+p {
+  font-family: Arial;
+  margin-bottom: 18px;
+  line-height: 22px;
+}
+a{
+  color: rgb(132, 183, 245);
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}
+ul {
+  margin: 0 0 10px 30px;
+  font-family: Arial, sans-serif;
+  list-style-type: square;
+}
+li{
+  margin-bottom: 5px;
+}
