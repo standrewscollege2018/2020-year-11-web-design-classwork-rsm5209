@@ -1,0 +1,30 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.Banner {
+  display: grid;
+  text-align: center;
+  background-color: rgb(17, 23, 212);
+  color: white;
+  padding: 20px 10px 20px 10px;
+}
+
+.Sub-Container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  text-align: center;
+  grid-column-gap: 5px;
+  padding: 5px 5px 5px 5px;
+}
+
+.Left{
+  background-color: rgb(34, 149, 201);
+  padding: 20px 10px 20px 10px;
+}
+
+.Right {
+  background-color: rgb(26, 88, 201);
+  padding: 20px 10px 20px 10px;
+}
