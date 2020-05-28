@@ -5,30 +5,10 @@
     <title></title>
   </head>
   <body>
-    <?php
+    <form action="hello.php" method="post">
+      <input type="text" name="firstname" placeholder="Enter your name">
+      <button type="button" name="submit">Click Me!</button>
 
-      // We use echo to create HTML (print)
-      echo("<h1>Hello World</h1>");
-
-      // Variables always start as $
-      $name = "Donald Mouse";
-
-      // Variables can be inserted into strings, such as when we are echoing something
-      echo("Hello $name");
-
-      // if statement use () brackets for the condition and {} for the code to run
-      if ($name == "Mickey Mouse") {
-        echo("Kill Donald");
-      } else {
-        echo("Kill Mickey");
-      }
-
-      $counter = 1;
-      do {
-        echo($counter);
-        $counter += 1;
-      } while ($counter <= 10);
-
-     ?>
+    </form>
   </body>
 </html>

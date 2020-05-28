@@ -1,0 +1,46 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.container {
+  width: 50%;
+  padding: 20px;
+  margin: 100px auto;
+  text-align: center;
+  font-family: Calibri;
+  font-size: 28px;
+}
+.module-border-wrap {
+  max-width: 100%;
+  padding: 1rem;
+  position: relative;
+  background: linear-gradient(to right, red, orange, rgb(0, 255, 4));
+  padding: 3px;
+}
+
+.module {
+  background: white;
+  color: black;
+  padding: 2rem;
+}
+
+body {
+  background-color: lightblue;
+}
+.submit-button {
+  background: rgb(0, 255, 4);
+  font-size: 16px;
+  font-family: Arial;
+  padding: 3px 3px;
+  text-align: center;
+}
+.text-reply {
+  color: red;
+  text-align: center;
+}
+.input-guess {
+  padding: 3px 3px;
+  font-size: 16px;
+  text-align: left;
+}
