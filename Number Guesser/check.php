@@ -15,7 +15,7 @@
     <div class="container">
       <?php
         // set number they are guessing
-        $number = 32;
+        $number = 27;
         // get number out of POST array and put into $guess variable
         $guess = $_POST['guess'];
         // check if it is right, too high or too low

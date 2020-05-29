@@ -22,7 +22,7 @@
       <?php
         if (isset($_GET['reply'])) {
           if($_GET['reply'] == "correct") {
-            echo "Well Done, you got it right!";
+            echo "Well Done, you got it right!" ;
           }
           elseif ($_GET['reply'] == "out of range") {
             echo "Please enter a number between 1 and 100";

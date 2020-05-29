@@ -35,6 +35,10 @@ body {
   padding: 3px 3px;
   text-align: center;
 }
+.text-reply-false {
+  color: red;
+  text-align: center;
+}
 .text-reply {
   color: red;
   text-align: center;
