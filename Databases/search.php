@@ -8,7 +8,7 @@
   <body>
     <div class="container">
     <div class="module-border-wrap"><div class="module">
-      
+
       <form class="" action="results.php" method="post">
         <p>Search for a student</p>
         <input required type="text" name="search" class="input-guess" placeholder="Enter first name to search">
