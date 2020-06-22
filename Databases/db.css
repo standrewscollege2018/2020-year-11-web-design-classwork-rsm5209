@@ -1,0 +1,102 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+@font-face {
+  font-family: BigNoodle;
+  src: url(fonts/big_noodle_titling.ttf);
+}
+
+.container {
+  width: 50%;
+  padding: 20px;
+  margin: 10px auto 0px auto;
+  text-align: center;
+  font-family: BigNoodle;
+  font-size: 28px;
+}
+.navbar {
+  display: grid;
+  grid-template-columns: auto;
+  text-align: center;
+  width: 50%;
+  padding: 2px 2px;
+  font-family: BigNoodle;
+  font-size: 28px;
+}
+.Nav {
+  text-align: center;
+}
+.module-border-wrap {
+  max-width: 100%;
+  padding: 1rem;
+  position: relative;
+  background: linear-gradient(to right, red, orange, rgb(0, 255, 4));
+  padding: 3px;
+}
+
+.module {
+  background: white;
+  color: black;
+  padding: 2rem;
+}
+
+body {
+  background-color: lightblue;
+}
+.submit-box {
+  background: lightblue;
+  font-size: 16px;
+  font-family: Arial;
+  padding: 3px 3px;
+  text-align: center;
+}
+.text-reply-false {
+  color: red;
+  text-align: center;
+}
+.text-reply {
+  color: red;
+  text-align: center;
+}
+.guessfield {
+  padding: 3px 3px;
+  font-size: 16px;
+  text-align: left;
+}
+
+@media only screen and (max-width: 700px) {
+.container {
+  font-size: 16px;
+  font-family: Arial;
+}
+.title {
+  font-size: 20px;
+}
+.navbar {
+  font-size: 16px;
+  font-family: Arial;
+}
+}
+
+.title {
+  text-align:center;
+  font-family: BigNoodle;
+  font-size: 28px;
+}
+
+.no-results {
+  text-align: center;
+}
+a {
+  padding: 5px;
+}
+
+.return-button {
+  padding: 5px 5px;
+}
+
+.image-resize {
+  max-width: 50%;
+  max-height: 50%;
+}

@@ -1,64 +1,88 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <link rel="stylesheet" href="style2.css">
     <meta charset="utf-8">
+    <link rel="stylesheet" href="db.css">
     <title></title>
   </head>
   <body>
-  </body>
-</html>
-<?php
-  // this page will run a query and display the result(s)
-  // we include the dbconnect.php code
-  include("dbconnect.php");
 
-  // check to see if the user searched something to come to this page
-  if(!isset($_POST['search'])) {
+    <?php
+    // this page will run  a query and display the result(s)
+
+    // we include the dbconnect.php code
+    include("dbconnect.php");
+    if(!isset($_POST['search'])) {
       header("Location: search.php");
     }
 
-  // there are 3 steps to running a select query
-  // 1. Set up the query in a variable
-  $search = $_POST['search'];
-  $result_sql = "SELECT * FROM student WHERE firstname LIKE '%$search%' OR lastname LIKE '%$search%'";
+    $name = $_POST['search'];
 
-  // 2. We go to the database and run the query.
-  // we use mysqli_query(). This takes two parameters: dbconnect and query
-  $result_qry = mysqli_query($dbconnect, $result_sql);
+    // there are 3 steps to running a select query
+    // 1. Set up the query in a variable
+    $result_sql = "SELECT * FROM student WHERE firstname LIKE '%$name%' OR lastname LIKE '%$name%'";
 
-  // 3. we organise our results into an associative array
-  // Basically, we can use the column headings from the database table
-  // we use the mysqli_fetch_assoc() function
-  $result_aa = mysqli_fetch_assoc($result_qry);
-?>
-<div class="banner">
-  <div class="title">
-    <h1>Search Results</h1>
-  </div>
-</div>
-<div class="container">
-  <div class="module-border-wrap"><div class="module-results">
-    <div class="left">
-    <form class="" action="search.php" method="post">
-      <button type="submit" name="button" class="return-button">Return</button>
-    </form>
+    ?>
+    <div class="banner">
+      <form class="return-button" action="search.php" method="post">
+        <button class="submit-box" type="submit" name="button">Return to search</button>
+      </form>
+      <div class="title">
+      <h2>Search Results</h2>
     </div>
-<?php
-do {
-  // display info
-  $firstname = $result_aa['firstname'];
-  $lastname = $result_aa['lastname'];
-  $tutor = $result_aa['tutorgroup']
-?>
-      <p><?php echo "$firstname $lastname $tutor" ?></p>
-<?php
-// the while() condition is just the third step of our process
-// of running this theory
-// It effectively means we repeat this code in the do{} part
-// as many times as there are results coming back from the database
-} while ($result_aa = mysqli_fetch_assoc($result_qry));
-?>
-</div></div>
+  </div>
+
+    <div class="container">
+      <div class="module-border-wrap"><div class="module">
+
+      <?php
+
+    // 2. WE go to the database and run the query
+    $result_qry = mysqli_query($dbconnect, $result_sql);
+    // check if there are any results to display
+    // use mysqli_num_rows(), which counts the number of results
+    if (mysqli_num_rows($result_qry)==0) {
+      //If no results are found print a message
+      echo "<h1 class='no-results'>No results found</h1>";
+    } else {
+      // 3. We organise our results into an associative array
+      // Basically, we can use the coloum headings from the database table
+      // We use the mysqli_fetch_assoc() fuction
+      $result_aa = mysqli_fetch_assoc($result_qry);
+
+      // Loop through $result_aa to display all results
+
+
+
+
+      do {
+        $firstname = $result_aa['firstname'];
+        $lastname = $result_aa['lastname'];
+        $tutor = $result_aa['tutorgroupID'];
+
+        ?>
+
+              <p><?php echo "$firstname $lastname $tutor"; ?></p>
+
+        <?php
+        // the while () condition is just the thrid step of our process
+        // of running the query
+        // It effectively means we repeat the code in the do{} part as
+        // many times as there are results coming back from the database
+
+      } while($result_aa = mysqli_fetch_assoc($result_qry));
+
+
+
+    }
+
+    ?>
+  </div></div>
+
 </div>
-<!-- echo "<div class=''><p>$firstname $lastname</p></div>" -->
+
+
+
+
+  </body>
+</html
